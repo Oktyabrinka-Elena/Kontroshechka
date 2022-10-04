@@ -27,9 +27,3 @@ for (int i = 0; i < NewArray.Length; i++)
     Console.Write($" [ {NewArray[i]} ] ");
 }
 Console.WriteLine();
-
-
-
-
-
-
