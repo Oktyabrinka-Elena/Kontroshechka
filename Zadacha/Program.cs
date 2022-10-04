@@ -13,7 +13,7 @@
 
 string[] ArrayString = new string[4] {"Hello", "2", "World",";-)"};
 string[] ArrayString2 = new string[ArrayString.Length];
-void ArrayString_checker(string[] ArrayString, string[] ArrayString2)
+void Reconciliation (string[] ArrayString, string[] ArrayString2)
 {
     for (int i = 0; i < ArrayString.Length; i++)
     {
@@ -31,5 +31,5 @@ void PrintArrayString(string[] ArrayString2)
         }
     Console.WriteLine();
 }
-ArrayString_checker(ArrayString, ArrayString2);
+Reconciliation (ArrayString, ArrayString2);
 PrintArrayString(ArrayString2);
