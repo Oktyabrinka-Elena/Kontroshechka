@@ -17,10 +17,7 @@ void Reconciliation (string[] ArrayString, string[] ArrayString2)
 {
     for (int i = 0; i < ArrayString.Length; i++)
     {
-    if (ArrayString[i].Length <= 3)
-        {
-        ArrayString2[i] = ArrayString[i];
-        }
+    if (ArrayString[i].Length <= 3) ArrayString2[i] = ArrayString[i];
     }
 }
 void PrintArrayString(string[] ArrayString2)
