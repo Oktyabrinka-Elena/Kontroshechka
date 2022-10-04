@@ -11,22 +11,26 @@
 
 //Массив задан на старте выполнения алгоритма
 
-string[] ArrayString = new string[4] {"Hello", "2", "World",";-)"};
+string[] ArrayString = new string[4] { "Hello", "2", "World", ";-)" };
 string[] ArrayString2 = new string[ArrayString.Length];
-void Reconciliation (string[] ArrayString, string[] ArrayString2)
+
+for (int i = 0; i < ArrayString.Length; i++)
 {
-    for (int i = 0; i < ArrayString.Length; i++)
-    {
     if (ArrayString[i].Length <= 3) ArrayString2[i] = ArrayString[i];
-    }
+    else ArrayString2[i] = "";
+    
 }
-void PrintArrayString(string[] ArrayString2)
+
+void PrintArrayString(string[] NewArray)
 {
-    for (int i = 0; i < ArrayString2.Length; i++)
-        {
-        Console.WriteLine($" {ArrayString2[i]} ");
-        }
+    for (int i = 0; i < NewArray.Length; i++)
+    {
+        Console.Write($" [ {NewArray[i]} ] ");
+    }
     Console.WriteLine();
 }
-Reconciliation (ArrayString, ArrayString2);
-PrintArrayString(ArrayString2);
+
+// string[] NewArray = ArrayString2.Where(s => s != "").ToArray();
+string[] NewArray = ArrayString2.Except(new string[] {""}).ToArray();
+PrintArrayString(NewArray);
+
